@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kawiarnia online</title>
+    <link rel="stylesheet" href="responsywnosc.css">
+</head>
+<body>
+    <nav id="main-nav">
+        <img src="https://picsum.photos/150/50" alt="logo">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger"> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- puste spany jako kreski od menu hamburger -->
+        </label>
+        <ul class="nav-links">
+            <li><a href="menu-responsywne.html">strona główna</a></li>
+            <li><a href="#nasze-kawy">oferta</a></li>
+            <li><a href="#header-onas">o nas</a></li>
+            <li><a href="#kontakt">kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+    <img src="kawa-zdj.png" alt="kawa-zdj" class="kawa-zdj">
+    <span class="kwadrat"></span>
+    <p class="tekst-zdj">Kawiarnia Online</p>
+    </div>
+<hr>
+    <p id="nasze-kawy">nasze kawy</p>
+    <div class="kafelki">
+    <div class="kafelek">
+        <p id="kafelek-tytul">espresso☕</p>
+        <p id="kafelek-opis">starannie wyselekcjonowane ziarna</p>
+    </div>
+    <div class="kafelek">
+        <p id="kafelek-tytul">latte☕</p>
+        <p id="kafelek-opis">mleczna symfonia smaku</p>
+    </div>
+    <div class="kafelek">
+        <p id="kafelek-tytul">ice americano☕</p>
+        <p id="kafelek-opis">podana na zimno z gałką lodów</p>
+    </div>
+    </div>
+<hr>
+    <p id="header-onas">o nas</p>
+    <p class="tytuly-onas">Więcej niż tylko filiżanka kawy</p>
+    <p class="opis-onas">Wszystko zaczęło się w 2015 roku z prostego marzenia – chcieliśmy stworzyć miejsce, w którym czas płynie wolniej, a zapach świeżo mielonych ziaren wita gości już od progu. Nasza kawiarnia to nie tylko biznes, to przystań dla lokalnej społeczności, marzycieli i miłośników prawdziwego smaku.</p>
+    <p class="tytuly-onas">Nasza Filozofia</p>
+    <p class="opis-onas">Wierzymy, że dobra kawa to suma pasji, wiedzy i szacunku do produktu. Od samego początku stawiamy na jakość, która broni się sama. Nie szukamy dróg na skróty – każda filiżanka, którą podajemy, jest efektem starannego procesu, od wyboru ziarna po idealnie spienione mleko.</p>
+    <p class="tytuly-onas">Skąd pochodzi nasze "czarne złoto"?</p>
+    <p class="opis-onas">Jakość zaczyna się na plantacji. Nasze ziarna sprowadzamy bezpośrednio z małych, rodzinnych upraw w Etiopii, Kolumbii oraz Brazylii. Współpracujemy wyłącznie z dostawcami stosującymi zrównoważone metody rolnictwa (Fair Trade), co gwarantuje, że każda kawa nie tylko smakuje wybitnie, ale też powstaje w etyczny sposób.</p>
+    <li class="opis-onas">
+        <ul>Selekcja: Wybieramy tylko ziarna segmentu Specialty.</ul>
+        <ul>Wypalanie: Nasza kawa jest wypalana lokalnie w małych partiach, co pozwala zachować pełnię profilu aromatycznego.</ul>
+        <ul>Świeżość: Mielimy ziarna tuż przed zaparzeniem, by nie uciekła z nich ani jedna nuta smakowa.</ul>
+    </li>
+    <p class="tytuly-onas">Dlaczego my?</p>
+    <p class="opis-onas">Bo wiemy, że kawa to rytuał. Niezależnie od tego, czy potrzebujesz szybkiego espresso na pobudzenie, czy planujesz długie popołudnie z książką i kremowym cappuccino, nasi bariści zadbają o to, byś poczuł się jak w domu.</p>
+    <p id="header-onas">Wpadnij do nas i daj się ugościć!</p>
+<hr>
+    <p id="kontakt">Kontakt</p>
+    <p class="tytuly-onas">Masz pytanie? skontkatuj się z nami za pomocą formularza kontaktowego, a my odpowiemy ci najszybciej jak to możliwe.</p>
+    <br>
+    <form method="post" class="kontakt-form">
+    <label for="pole1">Temat</label><br>
+    <input id="pole1" placeholder="Podaj temat wiadomości" name="temat" type="text" required=""><br><br>
+
+    <label for="pole2">Adres e-mail</label><br>
+    <input id="pole2" placeholder="Podaj adres e-mail" name="email" type="email" required=""><br><br>
+
+    <label>Wiadomość</label><br>
+    <textarea placeholder="Wpisz treść wiadomości" name="wiadomosc" rows="5" cols="40" required=""></textarea><br><br>
+
+    <input type="submit" value="Wyślij" class="submit">
+</form>
+</body>
+</html>
+<br><br><br>

@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* ten kwadracik od checkboxa zeby byl i dzialal, ale niewidoczny */
+#menu-toggle {
+    display: none;
+}
+
+#main-nav {
+    display: flex;
+    padding: 15px 5px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(38, 38, 38);
+    color: white;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 999;
+}
+
+/* to jest style od kresek menu burger */
+.hamburger > span {
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    display: block;
+    border-radius: 20%;
+    margin-right: 20px;
+    z-index: 1001;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    background-color: rgb(38, 38, 38);
+    padding: 20px;
+    gap: 5px;
+    box-sizing: border-box;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    transition: all 0.3s;
+}
+
+/* działa tylko wtedy kiedy menu checked czyli hamburger kliknięty */
+#menu-toggle:checked ~ .nav-links {
+    left: 0;
+    margin: 0;
+}
+
+#menu-toggle:checked ~ label span:first-child {
+    display: none;
+}
+
+#menu-toggle:checked ~ label span:nth-child(2) {
+    rotate: -45deg;
+}
+
+#menu-toggle:checked ~ label span:nth-child(3) {
+    rotate: 45deg;
+}
+
+.nav-links li,
+.nav-links li a {
+    text-align: center;
+    margin: 60px;
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    z-index: 1000;
+}
+
+.kawa-zdj {
+    display: block;
+    position: static;
+    width: 100vw;
+    height: calc(100vh - 80px);
+}
+
+.kwadrat {
+    position: absolute;
+    top: 64%;
+    left: 12%;
+    box-sizing: border-box;
+    border: 1px solid;
+    padding: 12% 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5%;
+    z-index: 1;
+}
+
+.tekst-zdj {
+    position: absolute;
+    top: 64%;
+    left: 12%;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 4px 7px;
+    z-index: 1;
+}
+
+#nasze-kawy {
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.kafelki {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.kafelek {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#kafelek-tytul {
+    font-weight: bold;
+}
+
+#header-onas {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tytuly-onas {
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+}
+
+.opis-onas {
+    font-size: small;
+    color: gray;
+    text-align: center;
+}
+
+#kontakt {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.kontakt-form {
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 300px;
+    padding: 10px 12px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.submit {
+    background-color: rgb(38, 38, 38);
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+@media (min-width: 768px) {
+    body {
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+
+    .nav-links li,
+    .nav-links li a {
+        margin: 0 20px;
+        font-size: medium;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: none;
+    }
+
+    .kafelki {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .kwadrat {
+    position: absolute;
+    top: 64%;
+    left: 12%;
+    box-sizing: border-box;
+    border: 1px solid;
+    padding: 100px 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5%;
+    }
+    
+    .tekst-zdj {
+        position: absolute;
+        top: 64%;
+        left: 12%;
+        background-color: transparent
+        color: white;
+        font-size: 30px;
+        padding: 8px 12px;
+    }
+}
